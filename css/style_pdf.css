@@ -1,0 +1,20 @@
+body {
+    font-family: "SimSun", "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    background-color: white;
+    word-wrap: break-word;
+}
+
+#navtop, #pdfdownload, #author {
+    display: none;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+}
+
+table td{
+    border:1px solid black;
+    border-collapse: collapse;
+    margin:0 auto;
+}

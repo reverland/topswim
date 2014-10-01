@@ -1,0 +1,172 @@
+body {
+    font-family: "SimSun", "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 18px;
+    margin: 5% 20% 5% 20%;
+    padding: 2% 5% 5% 5%;
+    width: 50%;
+    line-height: 150%;
+    border: 1px solid LightGrey;
+}
+
+#topbar {
+    background-color: DarkGreen;
+    color: white;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9990;
+}
+
+#navtop {
+    vertical-align: center;
+    margin: 10px;
+    padding-left: 20%;
+    height: 42px;
+    display: inline-block;
+}
+
+#author {
+    vertical-align: center;
+    margin: 20px 20px 0px 20px;
+    padding-right: 20%;
+    height: 30px;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+#origin, #pdfdownload{
+    display: block;
+    color: #698EBF;
+    font-size: 14px;
+    text-decoration: none;
+    text-align: right;
+}
+
+footer {
+    bottom: 10px;
+    text-align: center;
+    color: grey;
+    font-size: 12px;
+}
+
+H1 {
+    font-family: STKaiti, "Kaiti SC", "SimSun", "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+H2 {
+    font-family: STKaiti, "Kaiti SC", "SimSun", "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    margin-bottom: 60px;
+    margin-bottom: 40px;
+    padding: 5px;
+    border-bottom: 2px LightGrey solid;
+    width: 90%;
+    line-height: 150%;
+    color: DarkGreen;
+}
+
+
+H3 {
+    font-family: STKaiti, "Kaiti SC", "SimSun", "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    border-bottom: 1px LightGrey solid;
+    width: 80%;
+    line-height: 150%;
+    color: DarkBlue;
+}
+
+
+H4 {
+    font-family: STKaiti, "Kaiti SC", "SimSun", "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    border-bottom: 1px LightGrey solid;
+    width: 80%;
+    line-height: 150%;
+    color: DarkBlue;
+}
+
+
+li {
+    margin-left: 10px;
+}
+
+#toc li a{
+    color: DarkGreen;
+    text-decoration: none;
+    text-align: left;
+    text-weight: bold;
+}
+
+#toc {
+    list-style-type: none;
+}
+
+#toc .time{
+    float: right;
+}
+
+blockquote {
+    border-left: 4px lightgrey solid;
+    padding-left: 5px;
+    margin-left: 20px;
+}
+
+img {
+    margin-left: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+table td{
+    border-collapse: collapse;
+    margin:0 auto;
+    border:1px solid black;
+}
+
+/* pre {
+    font-family: Inconsolata, Consolas, "DEJA VU SANS MONO", "DROID SANS MONO", Proggy, monospace;
+    font-size: 75%;
+    border: solid 1px #CC929A;
+    background-color: Ivory;
+    padding: 5px;
+    line-height: 130%;
+    margin-left: 10px;
+    width: 95%;
+    word-break: break-all;
+    word-wrap: break-wrod;
+    white-space:pre-wrap;}
+}
+
+
+code {
+    font-family: Inconsolata, Consolas, "DEJA VU SANS MONO", "DROID SANS MONO", Proggy, monospace;
+    font-size: 90%;
+}
+
+
+a {
+    text-decoration: none;
+    cursor: crosshair;
+    border-bottom: 1px dashed Red;
+    padding: 1px;
+    color: black;
+}
+
+
+a:hover {
+    background-color: LightGrey;
+}
+
+
+
+hr {
+    color: LightGrey;
+}*/
