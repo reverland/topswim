@@ -24,3 +24,7 @@
 
     python update_index.py
 
+`update_toc`更新总目录
+
+    python update_toc.py
+
