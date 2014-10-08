@@ -120,11 +120,15 @@ li {
     left: -60px;
     position: relative;
 }
-#toc {
+#toc, #toc_all{
     list-style-type: none;
 }
 
 #toc .time{
+    float: right;
+}
+
+#toc_all .time{
     float: right;
 }
 
