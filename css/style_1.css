@@ -22,7 +22,7 @@ body {
 #navtop {
     vertical-align: center;
     margin: 10px;
-    padding-left: 20%;
+    margin-left: 20%;
     height: 42px;
     display: inline-block;
 }
@@ -102,6 +102,24 @@ li {
     text-weight: bold;
 }
 
+#toc li:hover{
+    border-radius: 20px;
+    box-shadow: 0 0 0 2px DarkGreen;
+    background-color: LightGrey;
+}
+
+#toc li{
+    display: block;
+    height: 60px;
+    width: 100%;
+    transition: all 0.2s ease-out 0s;
+    font-weight: bold;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 20px;
+    left: -60px;
+    position: relative;
+}
 #toc {
     list-style-type: none;
 }
