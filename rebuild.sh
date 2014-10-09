@@ -16,3 +16,5 @@ python topswim.py 39910 63 3
 python topswim.py 40260 7 3
 # 仰泳腿部技术入门练习（图文）|2014-10-08
 python topswim.py 50582 7 3
+# 游泳对皮肤何影响？|2014-10-09
+python topswim.py 53979 1 3
