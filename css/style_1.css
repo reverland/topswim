@@ -120,7 +120,19 @@ li {
     left: -60px;
     position: relative;
 }
-#toc, #toc_all{
+
+#toc_all {
+    list-style-type: none;
+    font-weight: bold;
+    color: DarkGreen;
+}
+
+#toc_all a {
+    color: DarkGreen;
+    text-decoration: none;
+}
+
+#toc{
     list-style-type: none;
 }
 
