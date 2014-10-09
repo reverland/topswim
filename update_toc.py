@@ -10,7 +10,7 @@ with open('rebuild.sh') as f:
 
 t = [x.strip('# \n') for x in lines[-2::-2]]
 dic = [(x.split('|')[0].decode('utf-8'), x.split('|')[1]) for x in t]
-dic = dic[::-1]
+#dic = dic[::-1]
 
 with open('./html/toc.html') as f:
     root = fromstring(f.read())
