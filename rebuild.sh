@@ -18,5 +18,3 @@ python topswim.py 40260 7 3
 python topswim.py 50582 7 3
 # 游泳对皮肤何影响？|2014-10-09
 python topswim.py 53979 1 3
-# 练好游泳的内功――超直|2014-10-09
-python topswim.py 11424 33 3
