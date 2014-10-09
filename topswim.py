@@ -107,6 +107,7 @@ def download(tid, n_layer):
 
 def download_img(images):
     try:
+        # 因为不一定有images
         for img in images:
             # 奇葩的attachment.gif
             if img.get('src') == 'images/attachicons/image.gif':
@@ -119,14 +120,12 @@ def download_img(images):
             if img_url.find("http://") == -1:
                 img_url = 'http://www.topswim.net/' + img_url
             # print img_url
+            # 如果图像文件已经下载，跳过
             if os.path.exists('html/image/' + filename):
                 continue
             # download
             try:
-                r = requests.get(img_url, stream=True)
-                with open('html/image/' + filename, 'wb') as f:
-                    for chunk in r.iter_content():
-                        f.write(chunk)
+                _download_img(img_url, filename)
             except:
                 continue
     except:
@@ -134,7 +133,17 @@ def download_img(images):
     return images
 
 
+def _download_img(img_url, filename):
+    r = requests.get(img_url, stream=True)
+    with open('html/image/' + filename, 'wb') as f:
+        for chunk in r.iter_content():
+            f.write(chunk)
+
+
 def remove_white(html):
+    """
+    移除白色字体
+    """
     root = fromstring(html)
     whites = root.xpath('//font[@color="white"]')
     for white in whites:
@@ -143,6 +152,12 @@ def remove_white(html):
 
 
 def remove_swf(html):
+    """
+    将视频替换为播放地址
+    优酷可用，其它不知
+    """
+    # 所以说unicode与否搞死人啊
+    # py3 大法好，退2保平安
     html = html.decode('utf-8')
     root = fromstring(html)
     whites = root.xpath('//object')
@@ -152,8 +167,6 @@ def remove_swf(html):
         link.text = u"视频地址： " + link_url
         white.getparent().append(link)
         white.getparent().remove(white)
-    # 所以说unicode与否搞死人啊
-    # py3 大法好，退2保平安
     return tostring(root, encoding='unicode')
 
 
@@ -175,6 +188,7 @@ if FLAG_PDF:
         write_pdf('html/pdf/' + title + '.pdf',
                   stylesheets=[CSS(filename='html/css/style_pdf.css')])
 
+# 更新rebuild.sh文件
 with open("./rebuild.sh", 'a') as f:
     record = u"# " + title + '|'
     record += datetime.date.today().isoformat()
