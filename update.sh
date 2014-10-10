@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-python topswim.py $1 $2 $3
+python topswim.py $1 $2 1
 
 # update index.html
 

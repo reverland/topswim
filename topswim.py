@@ -18,19 +18,14 @@ try:
     n_layer = int(sys.argv[2])
     tid = int(sys.argv[1])
     flag = int(sys.argv[3])
-    if flag == 1:  # online
-        FLAG_ONLINE = True
-        FLAG_PDF = False
-    elif flag == 2:  # pdf
-        FLAG_ONLINE = False
-        FLAG_PDF = True
-    elif flag == 3:  # both html and pdf
-        FLAG_ONLINE = True
-        FLAG_PDF = True
-    elif flag == 4:
-        print "flag NOT IMPLEMENTED"
-        FLAG_ONLINE = False
-        FLAG_PDF = False
+    if flag == 1:  # update
+        FLAG_UPDATE = True
+        FLAG_REBUILD = False
+    elif flag == 2:  # rebuild
+        FLAG_UPDATE = False
+        FLAG_REBUILD = True
+    else:
+        print "NOT IMPLEMENTED"
         sys.exit(0)
 
 except:
@@ -99,10 +94,16 @@ def download(tid, n_layer):
             )[0] == str(n_layer):
                 new_html += footer % (unicode(url.split('&')[-2]),
                                       title)
-                new_html = remove_white(new_html)
+                new_html = remove_unused_tags(new_html)
                 return title, new_html
 
         n_page += 1
+
+
+def remove_unused_tags(html):
+    html = remove_white(html)
+    html = remove_postratings(html)
+    return html
 
 
 def download_img(images):
@@ -151,6 +152,17 @@ def remove_white(html):
     return tostring(root, encoding='unicode')
 
 
+def remove_postratings(html):
+    """
+    移除评分
+    """
+    root = fromstring(html)
+    postratings = root.xpath('//span[@class="postratings"]')
+    for postrating in postratings:
+        postrating.getparent().remove(postrating)
+    return tostring(root, encoding='unicode')
+
+
 def remove_swf(html):
     """
     将视频替换为播放地址
@@ -176,25 +188,26 @@ print "[!] : ", title
 
 html = html.encode('utf-8')
 
-if FLAG_ONLINE:
-    with open('html/' + title + '.html', 'wb') as f:
-        f.write(html)
+with open('html/' + title + '.html', 'wb') as f:
+    f.write(html)
 
-if FLAG_PDF:
-    html = html.replace('style_1.css', 'style_pdf.css')
-    html = remove_swf(html)
-    HTML(string=html,
-         base_url="./html/").\
-        write_pdf('html/pdf/' + title + '.pdf',
-                  stylesheets=[CSS(filename='html/css/style_pdf.css')])
+html = html.replace('style_1.css', 'style_pdf.css')
+html = remove_swf(html)
+HTML(string=html,
+     base_url="./html/").\
+    write_pdf('html/pdf/' + title + '.pdf',
+              stylesheets=[CSS(filename='html/css/style_pdf.css')])
 
 # 更新rebuild.sh文件
-with open("./rebuild.sh", 'a') as f:
-    record = u"# " + title + '|'
-    record += datetime.date.today().isoformat()
-    record += '\n'
-    record += "python topswim.py "
-    record += str(tid) + " " + str(n_layer) + " " + str(flag)
-    record += '\n'
-    record = record.encode('utf-8')
-    f.write(record)
+if FLAG_UPDATE:
+    with open("./rebuild.sh", 'a') as f:
+        record = u"# " + title + '|'
+        record += datetime.date.today().isoformat()
+        record += '\n'
+        record += "python topswim.py "
+        record += str(tid) + " " + str(n_layer) + " 1"
+        record += '\n'
+        record = record.encode('utf-8')
+        f.write(record)
+elif FLAG_REBUILD:
+    pass

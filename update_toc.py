@@ -5,7 +5,7 @@ from lxml.html import fromstring, tostring
 from lxml import etree
 
 
-with open('rebuild.sh') as f:
+with open('./rebuild.sh') as f:
     lines = f.readlines()[2:]
 
 t = [x.strip('# \n') for x in lines[-2::-2]]
