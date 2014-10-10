@@ -18,3 +18,5 @@ python topswim.py 40260 7 3
 python topswim.py 50582 7 3
 # 游泳对皮肤何影响？|2014-10-09
 python topswim.py 53979 1 3
+# 有关自由泳呼吸技术的最完整论述！|2014-10-10
+python topswim.py 55985 7 3
