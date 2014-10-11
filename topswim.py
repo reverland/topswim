@@ -58,6 +58,24 @@ def download(tid, n_layer):
     footer = u"""
     <a id='origin' href='%s'>在topswim上查看原文讨论</a>
     <a id='pdfdownload' href='pdf/%s.pdf'>保存为pdf格式</a>
+    <!-- 多说评论框 start -->
+    <div class="ds-thread"
+    data-thread-key="%s" data-title="%s" data-url="%s"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"reverland"};
+    (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol ==
+    'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+    </script>
+<!-- 多说公共JS代码 end -->
     </body>
     <footer>© Reverland 2014</footer>
     </html>
@@ -92,8 +110,12 @@ def download(tid, n_layer):
             if post.xpath(
                 './div[@class="postinfo"]/strong/text()'
             )[0] == str(n_layer):
+                c_url = "http://swim.reverland.org/" + title + '.html'
                 new_html += footer % (unicode(url.split('&')[-2]),
-                                      title)
+                                      title,
+                                      tid,
+                                      title,
+                                      c_url)
                 new_html = remove_unused_tags(new_html)
                 return title, new_html
 
