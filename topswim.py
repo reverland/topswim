@@ -205,7 +205,7 @@ if FLAG_UPDATE:
         record += datetime.date.today().isoformat()
         record += '\n'
         record += "python topswim.py "
-        record += str(tid) + " " + str(n_layer) + " 1"
+        record += str(tid) + " " + str(n_layer) + " 2"
         record += '\n'
         record = record.encode('utf-8')
         f.write(record)

@@ -20,3 +20,5 @@ python topswim.py 50582 7 2
 python topswim.py 53979 1 2
 # 有关自由泳呼吸技术的最完整论述！|2014-10-10
 python topswim.py 55985 7 2
+# 克服游泳障碍的窍门|2014-10-11
+python topswim.py 30513 2 2
