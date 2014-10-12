@@ -22,3 +22,5 @@ python topswim.py 53979 1 2
 python topswim.py 55985 7 2
 # 克服游泳障碍的窍门|2014-10-11
 python topswim.py 30513 2 2
+# （菜头心得）水感的获得---大腿、髋腹|2014-10-12
+python topswim.py 58796 2 2
