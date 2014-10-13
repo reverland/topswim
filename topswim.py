@@ -197,9 +197,11 @@ def remove_swf(html):
     whites = root.xpath('//object')
     for white in whites:
         link_url = white.xpath('./embed')[0].get('src')
+        link_container = etree.Element('div')
         link = etree.Element('a', href=link_url)
         link.text = u"视频地址： " + link_url
-        white.getparent().append(link)
+        link_container.append(link)
+        white.getparent().append(link_container)
         white.getparent().remove(white)
     return tostring(root, encoding='unicode')
 
