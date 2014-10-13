@@ -24,3 +24,5 @@ python topswim.py 55985 7 2
 python topswim.py 30513 2 2
 # （菜头心得）水感的获得---大腿、髋腹|2014-10-12
 python topswim.py 58796 2 2
+# 【视频】自由泳技巧----初学者不能不知道的技巧|2014-10-13
+python topswim.py 75657 1 2
