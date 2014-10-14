@@ -26,3 +26,5 @@ python topswim.py 30513 2 2
 python topswim.py 58796 2 2
 # 【视频】自由泳技巧----初学者不能不知道的技巧|2014-10-13
 python topswim.py 75657 1 2
+# 游泳抽筋原因入解救法图释|2014-10-14
+python topswim.py 73682 12 2
