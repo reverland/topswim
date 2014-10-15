@@ -28,3 +28,5 @@ python topswim.py 58796 2 2
 python topswim.py 75657 1 2
 # 游泳抽筋原因入解救法图释|2014-10-14
 python topswim.py 73682 12 2
+# 运动中的基本姿势|2014-10-15
+python topswim.py 73607 1 2
