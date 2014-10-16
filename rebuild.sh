@@ -30,3 +30,5 @@ python topswim.py 75657 1 2
 python topswim.py 73682 12 2
 # 运动中的基本姿势|2014-10-15
 python topswim.py 73607 2 2
+# 运动后如何缓解肌肉疼痛|2014-10-16
+python topswim.py 714 3 2
