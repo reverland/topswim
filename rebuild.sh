@@ -32,3 +32,5 @@ python topswim.py 73682 12 2
 python topswim.py 73607 2 2
 # 运动后如何缓解肌肉疼痛|2014-10-16
 python topswim.py 714 3 2
+# 运动对骨质结构代谢影响|2014-10-17
+python topswim.py 4652 1 2
