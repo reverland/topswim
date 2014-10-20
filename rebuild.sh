@@ -36,3 +36,5 @@ python topswim.py 714 3 2
 python topswim.py 4652 1 2
 # 肩关节知识问答|2014-10-18
 python topswim.py 71777 3 2
+# 运动营养补剂|2014-10-20
+python topswim.py 764 1 2
