@@ -38,3 +38,5 @@ python topswim.py 4652 1 2
 python topswim.py 71777 3 2
 # 运动营养补剂|2014-10-20
 python topswim.py 764 1 2
+# 游泳腰的作用|2014-10-22
+python topswim.py 75568 1 2
