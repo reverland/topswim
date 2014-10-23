@@ -40,3 +40,5 @@ python topswim.py 71777 3 2
 python topswim.py 764 1 2
 # 游泳腰的作用|2014-10-22
 python topswim.py 75568 1 2
+# 自由泳腿部的练习要领|2014-10-23
+python topswim.py 39917 29 2
