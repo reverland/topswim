@@ -46,3 +46,5 @@ python topswim.py 39917 29 2
 python topswim.py 40007 1 2
 # 如何改进水中姿态 译文: Seahiker How to Stop Swimming Like Gollum in 5 Easy Steps|2014-11-12
 python topswim.py 78540 12 2
+# 蛙泳划臂技术 (图解)|2014-11-16
+python topswim.py 1541 8 2
