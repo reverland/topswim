@@ -50,3 +50,5 @@ python topswim.py 78540 12 2
 python topswim.py 1541 8 2
 # 游泳的生物力学-----值得细细品味，不时翻看的好文！|2014-11-20
 python topswim.py 28669 1 2
+# 蛙泳划手练习|2014-11-22
+python topswim.py 73401 3 2
