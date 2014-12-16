@@ -52,3 +52,5 @@ python topswim.py 1541 8 2
 python topswim.py 28669 1 2
 # 蛙泳划手练习|2014-11-22
 python topswim.py 73401 3 2
+# 摩西的蛙泳技术15张图片解|2014-12-16
+python topswim.py 33965 15 2
