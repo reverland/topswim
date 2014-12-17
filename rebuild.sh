@@ -54,3 +54,5 @@ python topswim.py 28669 1 2
 python topswim.py 73401 3 2
 # 摩西的蛙泳技术15张图片解|2014-12-16
 python topswim.py 33965 15 2
+# 赞！ 四样泳姿图解教材 (GIF.小动画)|2014-12-17
+python topswim.py 82328 1 2
