@@ -56,3 +56,5 @@ python topswim.py 73401 3 2
 python topswim.py 33965 15 2
 # 赞！ 四样泳姿图解教材 (GIF.小动画)|2014-12-17
 python topswim.py 82328 1 2
+# 打腿打腿打腿|2014-12-19
+python topswim.py 77449 2 2
