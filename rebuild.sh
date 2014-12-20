@@ -58,3 +58,5 @@ python topswim.py 33965 15 2
 python topswim.py 82328 1 2
 # 打腿打腿打腿|2014-12-19
 python topswim.py 77449 2 2
+# 在泳池游泳如何保护眼、耳、发、肤|2014-12-20
+python topswim.py 41420 4 2
