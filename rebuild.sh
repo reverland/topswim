@@ -60,3 +60,5 @@ python topswim.py 82328 1 2
 python topswim.py 77449 2 2
 # 在泳池游泳如何保护眼、耳、发、肤|2014-12-20
 python topswim.py 41420 4 2
+# 游泳前后的拉伸|2014-12-21
+python topswim.py 111722 1 2
