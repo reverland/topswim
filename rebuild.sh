@@ -62,3 +62,5 @@ python topswim.py 77449 2 2
 python topswim.py 41420 4 2
 # 游泳前后的拉伸|2014-12-21
 python topswim.py 111722 1 2
+# 小鱼的自由泳体会|2015-01-17
+python topswim.py 23370 1 2
