@@ -6,9 +6,9 @@
 
 主脚本：
 
-`update.sh`负责每日更新
+`update.sh`负责每日更新, 84628为pid, 7为待抓取层数.
 
-    sh ./update.sh 84268 7 3
+    sh ./update.sh 84268 7
 
 `rebuild.sh`重建所有页面
 
@@ -16,15 +16,15 @@
 
 辅助脚本：
 
-`topswim.py`是爬虫，参数分别为帖子号tid，爬取层数，生成结果(3表示生成pdf和html)
+`topswim.py`是爬虫，参数分别为帖子号tid，爬取层数，标志位(更新1或者重构2)
 
-    python topswim python topswim.py 73347 11 3
+    python topswim.py 73347 11 1
 
 `update_index.py`更新主页
 
     python update_index.py
 
-`update_toc`更新总目录
+`update_toc.py`更新总目录
 
     python update_toc.py
 
