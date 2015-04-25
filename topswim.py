@@ -36,10 +36,13 @@ def download(tid, n_layer):
     n_page = 1
     new_html = ''
     header = u"""
-    <html>
+    <!DOCTYPE html>
+    <html lang="zh">
     <head>
+    <meta charset="UTF-8">
     <title>游泳日报——来自topswim的精选——%s</title>
-    <link href="css/style_1.css" type="text/css" rel="stylesheet">
+    <link href="css/style_1.css" media="screen and (min-width: 600px)" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href="css/mobi.css" type="text/css">
     <link rel="shortcut icon" href="favicon.ico" >
     </head>
     <body>
